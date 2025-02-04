@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News :: Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        *{
+            box-sizing: border-box;            
+            font-family: "Anek Telugu", sans;
+        }
+
+        .navbar {
+            background: purple;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            padding: 0.5rem 1rem;
+        }
+        .breaking-news {
+            background: #dc3545;
+            color: white;
+            padding: 8px;
+        }
+        .breaking-news-label {
+            background: #dc3545;
+            color: white;
+            padding: 5px 15px;
+            margin-right: 10px;
+        }
+        .news-section h4 {
+            position: relative;
+            padding-left: 25px;
+            border-left: 8px solid #05439f;
+            background: linear-gradient(to right, #0d6efd, white);
+            color: white;
+            padding: 10px 25px;
+                        display: flex;
+                align-items: center;
+                justify-content: space-between;
+        }
+        
+        
+        /* Add gradient overlay for carousel items */
+        .carousel-item {
+            position: relative;
+        }
+        
+        
+        .carousel-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70%;  /* Controls how far up the gradient extends */
+            background: linear-gradient(to bottom, 
+                rgba(0,0,0,0) 0%,
+                rgba(0, 0, 0, 0.795) 100%);
+            pointer-events: none; /* Ensures clicks pass through to elements below */
+        }
+
+        /* Ensure caption text stays above gradient */
+        .carousel-caption {
+          
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+       
+
+        .news-section li {
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 0.5rem;
+        }
+        
+        .news-section li a:hover {
+            color: #0d6efd !important;
+            transition: color 0.2s ease;
+        }
+
+        /*scroll bar styles
+
+                /* width */
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #888; 
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+        }
+
+    </style>
+    <style>
+        @media (max-width: 575.98px) { 
+            .carousel-item{
+                height: 350px;
+            }
+            .carousel-item img{
+                transform: scale(3);
+            }
+
+         }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Telangana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Andhra Pradesh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">National</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">International</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Crime</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">District News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">EPaper</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breaking News -->
+    <div class="container mt-2">
+        <div class="d-flex breaking-news">
+            <span class="breaking-news-label">BN</span>
+            <marquee>Naidu receives warm welcome in Davos | Supreme Court gives big relief to Rahul Gandhi | Tragedy in the film industry - Veteran actor Vijay Rangaraju pa</marquee>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-3">
+        <div class="row">
+            <!-- Carousel Section (8 columns) -->
+            <div class="col-md-8 p-2">
+                <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Add carousel indicators -->
+                    <div class="carousel-indicators" style="z-index: 200;">
+                        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/id/120/800/400" class="d-block w-100" alt="News Image">
+                            <div class="carousel-caption" >
+                                <span class="badge bg-danger">Telangana</span>
+                                <h5>Skin Tilla 2025 celebrations at Somidi Tallapadmavati Olympiad School</h5>
+                                <p>Vishwambhara, Hanmakonda: The Skin Tilla 2025 celebrations held at Talla Padmavati School in Somidi, Kazipet Mandal...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/id/121/800/400" class="d-block w-100" alt="News Image">
+                            <div class="carousel-caption">
+                                <span class="badge bg-primary">National</span>
+                                <h5>Supreme Court Gives Big Relief to Rahul Gandhi</h5>
+                                <p>New Delhi: In a significant development, the Supreme Court today stayed the conviction of Congress leader Rahul Gandhi...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/id/122/800/400" class="d-block w-100" alt="News Image">
+                            <div class="carousel-caption">
+                                <span class="badge bg-success">International</span>
+                                <h5>Naidu Receives Warm Welcome in Davos</h5>
+                                <p>Davos: Former Chief Minister N Chandrababu Naidu received a warm welcome at the World Economic Forum meeting...</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/id/123/800/400" class="d-block w-100" alt="News Image">
+                            <div class="carousel-caption">
+                                <span class="badge bg-warning">Entertainment</span>
+                                <h5>Veteran Actor Vijay Rangaraju Passes Away</h5>
+                                <p>Hyderabad: The film industry mourns the loss of veteran character actor Vijay Rangaraju who passed away...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Latest News Section (4 columns) -->
+            <div class="col-md-4 news-section p-2">
+                <div class="shadow">
+                <h4>తెలంగాణ వార్తలు<a href="#" class="btn btn-primary btn-sm float-end">More <i class="bi bi-arrow-right"></i></a></h4>
+                <ul class="list-unstyled p-3" style="max-height: 320px; overflow-y: scroll; padding-right: 10px;">
+
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">ఘనంగా  విత్రీ న్యూస్ ఛానల్ క్యాలెండర్ ఆవిష్కరణ </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">ఉడ్ -బాల్  టోర్నమెంట్ లో తెలంగాణ రాష్ట్ర  ప్రభంజనాలు </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">పయనీరింగ్ ఎక్సలెన్స్‌తో వజ్రా ఈవెంట్స్ 13వ వార్షికోత్సవం </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">టీపీసీసీ చీఫ్ మహేష్ కుమార్ గౌడ్ చేతుల మీదుగా బ్రోచర్ విడుదల</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">Brochure released by TPCC Chief Mahesh Kumar Goud</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">Grand launch of Vitri News Channel calendar</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">Telangana State triumphs in Woodball Tournament</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">Vajra Events celebrates 13th anniversary with pioneering excellence</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">Grand launch of Vitri News Channel calendar</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="text-dark text-decoration-none">Brochure released by TPCC Chief Mahesh Kumar Goud</a>
+                    </li>
+                    <li class="mb-3">
+                        <div class="text-end p-3">
+                            <a href="#" class="btn btn-primary btn-sm">More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </li>
+                </ul>
+                
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+
+
+</body>
+</html>
